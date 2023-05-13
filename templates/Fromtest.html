@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<script src="https://www.google.com/recaptcha/api.js"></script>
+	<script>
+   function onSubmit(token) {
+     document.getElementById("sendmsg").submit();
+   }
+ </script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form - Submit</title>
+	<style> 
+input[type=text] {
+  width: 100%;
+  font-size:30px;
+  outline: none;
+  height: 70px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 4px solid #4569ff;
+  background-color: #f8f8f8;
+  resize: none;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+input[type=text]:focus {
+  background-color: #FEEAFC;
+}
+
+
+input[type=button], input[type=submit], input[type=reset] :before{
+  background-color: blue;
+  border: none;
+  color: white;
+  padding: 16px 64px;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 30px;
+  overflow: hidden;
+}
+
+
+</style>
+
+</head>
+<body>
+    <form action="/formSubmit/{{ID}}" method="post" style="text-align: center; " id="sendmsg">
+        <p><input type="text" name="msg" /></p>
+		<p><input type="submit" value="發送"/></p>
+    </form>
+</body>
+</html>
